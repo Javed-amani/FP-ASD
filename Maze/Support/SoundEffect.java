@@ -2,7 +2,7 @@
 // FILE: SoundEffect.java
 // Menangani efek suara untuk berbagai event
 // ============================================================================
-package Maze;
+package Maze.Support;
 
 import javax.sound.sampled.*;
 

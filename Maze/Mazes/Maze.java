@@ -2,9 +2,11 @@
 // FILE: Maze.java
 // Model data maze - menyimpan struktur maze dan state-nya
 // ============================================================================
-package Maze;
+package Maze.Mazes;
 
 import java.util.*;
+
+import Maze.Support.Point2D;
 
 
 public class Maze {

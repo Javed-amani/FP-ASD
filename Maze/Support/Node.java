@@ -3,7 +3,7 @@
 // Representasi node dalam algoritma pencarian (BFS/DFS)
 // Menyimpan posisi dan parent untuk backtracking path
 // ============================================================================
-package Maze;
+package Maze.Support;
 
 public class Node {
     private final int x;

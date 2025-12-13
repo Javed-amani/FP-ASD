@@ -2,9 +2,16 @@
 // FILE: MazeController.java
 // Controller yang mengatur logic aplikasi dan koordinasi antar komponen
 // ============================================================================
-package Maze;
+package Maze.Mazes;
 
 import javax.swing.Timer;
+
+import Maze.Path.BFSPathFinder;
+import Maze.Path.DFSPathFinder;
+import Maze.Support.Point2D;
+import Maze.Support.SearchResult;
+import Maze.Support.SoundEffect;
+
 import java.util.ArrayList;
 import java.util.List;
 

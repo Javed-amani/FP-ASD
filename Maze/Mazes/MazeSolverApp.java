@@ -3,13 +3,11 @@
 // Main application class - setup UI dan koordinasi
 // ============================================================================
 
-package Maze;
+package Maze.Mazes;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
-import Maze.*;
-import Maze.MazeController;
+
 
 public class MazeSolverApp extends JFrame {
     private final Maze maze;

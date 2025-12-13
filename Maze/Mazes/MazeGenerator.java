@@ -2,9 +2,12 @@
 // FILE: MazeGenerator.java
 // Bertanggung jawab untuk generate maze menggunakan Prim's algorithm
 // ============================================================================
-package Maze;
+package Maze.Mazes;
 
 import java.util.*;
+
+import Maze.Support.Point2D;
+import Maze.Support.Wall;
 
 public class MazeGenerator {
     private final Maze maze;

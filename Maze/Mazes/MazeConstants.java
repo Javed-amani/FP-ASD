@@ -2,7 +2,7 @@
 // FILE: MazeConstants.java
 // Menyimpan semua konstanta yang digunakan dalam aplikasi
 // ============================================================================
-package Maze;
+package Maze.Mazes;
 
 import java.awt.*;
 

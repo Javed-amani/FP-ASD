@@ -1,12 +1,17 @@
 // ============================================================================
-// FILE: DFSPathFinder.java
-// Implementasi algoritma Depth-First Search untuk mencari path
+// FILE: BFSPathFinder.java
+// Implementasi algoritma Breadth-First Search untuk mencari path
 // ============================================================================
-package Maze;
+package Maze.Path;
 
 import java.util.*;
 
-public class DFSPathFinder implements PathFinder {
+import Maze.Mazes.Maze;
+import Maze.Support.Node;
+import Maze.Support.Point2D;
+import Maze.Support.SearchResult;
+
+public class BFSPathFinder implements PathFinder {
     // Arah pergerakan (atas, bawah, kiri, kanan)
     private static final int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     
@@ -14,8 +19,8 @@ public class DFSPathFinder implements PathFinder {
     public SearchResult findPath(Maze maze) {
         maze.resetVisited();
         
-        // Stack untuk DFS
-        Stack<Node> stack = new Stack<>();
+        // Queue untuk BFS
+        Queue<Node> queue = new LinkedList<>();
         List<Point2D> exploredNodes = new ArrayList<>();
         
         Point2D start = maze.getStart();
@@ -23,14 +28,14 @@ public class DFSPathFinder implements PathFinder {
         
         // Mulai dari start position
         Node startNode = new Node(start.getX(), start.getY(), null);
-        stack.push(startNode);
+        queue.offer(startNode);
         maze.markVisited(start.getX(), start.getY());
         
         Node endNode = null;
         
-        // DFS traversal
-        while (!stack.isEmpty()) {
-            Node current = stack.pop();
+        // BFS traversal
+        while (!queue.isEmpty()) {
+            Node current = queue.poll();
             exploredNodes.add(current.toPoint());
             
             // Cek jika sudah sampai end
@@ -40,7 +45,7 @@ public class DFSPathFinder implements PathFinder {
             }
             
             // Eksplorasi tetangga
-            exploreNeighbors(current, stack, maze);
+            exploreNeighbors(current, queue, maze);
         }
         
         // Build final path jika ditemukan
@@ -50,14 +55,14 @@ public class DFSPathFinder implements PathFinder {
     }
     
     // Eksplorasi cell-cell tetangga
-    private void exploreNeighbors(Node current, Stack<Node> stack, Maze maze) {
+    private void exploreNeighbors(Node current, Queue<Node> queue, Maze maze) {
         for (int[] dir : DIRECTIONS) {
             int nextX = current.getX() + dir[0];
             int nextY = current.getY() + dir[1];
             
             if (canMoveTo(nextX, nextY, maze)) {
                 maze.markVisited(nextX, nextY);
-                stack.push(new Node(nextX, nextY, current));
+                queue.offer(new Node(nextX, nextY, current));
             }
         }
     }

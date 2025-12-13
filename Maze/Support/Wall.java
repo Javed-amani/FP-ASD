@@ -2,7 +2,7 @@
 // FILE: Wall.java
 // Representasi dinding dalam algoritma Prim's untuk maze generation
 // ============================================================================
-package Maze;
+package Maze.Support;
 
 public class Wall {
     private final int row;

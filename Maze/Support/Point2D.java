@@ -2,7 +2,7 @@
 // FILE: Point2D.java
 // Representasi koordinat 2D dalam maze
 // ============================================================================
-package Maze;
+package Maze.Support;
 
 public class Point2D {
     private final int x;

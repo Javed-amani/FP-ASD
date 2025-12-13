@@ -2,7 +2,7 @@
 // FILE: SearchResult.java
 // Menyimpan hasil pencarian path (explored nodes dan final path)
 // ============================================================================
-package Maze;
+package Maze.Support;
 
 import java.util.*;
 

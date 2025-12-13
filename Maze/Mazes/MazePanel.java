@@ -2,13 +2,15 @@
 // FILE: MazePanel.java
 // JPanel untuk render visualisasi maze
 // ============================================================================
-package Maze;
+package Maze.Mazes;
 
 import javax.swing.*;
+
+import Maze.Support.Point2D;
+
 import java.awt.*;
 import java.util.List;
-import java.util.*;
-import Maze.*;
+
 
 public class MazePanel extends JPanel {
     private final Maze maze;
