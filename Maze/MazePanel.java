@@ -10,7 +10,6 @@ import javax.swing.Timer;
 
 // MazePanel (High Resolution & Dense Maze)
 class MazePanel extends JPanel {
-    // TIPS: Gunakan angka GANJIL untuk ROWS dan COLS agar maze sempurna (tembok 1 blok)
     private final int ROWS = 35; // Harus Ganjil
     private final int COLS = 45; // Harus Ganjil
     private final int CELL_SIZE = 20; // Ukuran disesuaikan
@@ -168,7 +167,7 @@ class MazePanel extends JPanel {
     }
 
     // ---------------------------------------------
-    // Visualisasi & Pathfinding Control (DENGAN FIX GARIS KUNING)
+    // Visualisasi & Pathfinding Control
     // ---------------------------------------------
     public void startSolving(String algo) {
         if (isAnimating) return;
